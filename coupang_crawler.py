@@ -10,7 +10,6 @@ from selenium import webdriver
 from selenium.common import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
 
 options = Options()
 options.add_argument("--start-maximized")
@@ -126,7 +125,7 @@ for category_number in range(select_category_start, select_category_end + 1):
                         new_category_number = match.group(1)
                         print("실제 카테고리 번호:", new_category_number)
 
-                    sub_crawling(new_category_number)
+                        sub_crawling(new_category_number)
 
                 except NoSuchElementException:
                     break
